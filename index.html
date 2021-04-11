@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="Clock.css">
   </head>
 
-  <body class="light">
+  <body class="">
+    <label>
+      <input type="checkbox" onclick="changeMode()">
+      <span class="check"></span>
+    </label>
+    
     <div class="clock">
       <div class="hour">
         <div class="hr" id="hr"></div>
@@ -20,7 +25,14 @@
       </div>
     </div>
 
+
     <script type="text/javascript">
+      function changeMode() {
+        const body = document.querySelector('body');
+        body.classList.toggle("dark");
+
+      }
+
       const deg = 6;
       const hr = document.querySelector('#hr');
       const mn = document.querySelector('#mn');
