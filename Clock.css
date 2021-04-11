@@ -160,7 +160,7 @@ input[type="checkbox"]:checked~.check {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  transition: 0.5s;
+  transition: 0.15s;
 }
 
 input[type="checkbox"]:checked~.check:before {
