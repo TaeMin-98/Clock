@@ -12,32 +12,47 @@
       <input type="checkbox" onclick="changeMode()">
       <span class="check"></span>
     </label>
-    
-    <div class="clock">
-      <div class="hour">
-        <div class="hr" id="hr"></div>
+
+    <header>
+      <div class="clock">
+        <div class="hour">
+          <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+          <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+          <div class="sc" id="sc"></div>
+        </div>
       </div>
-      <div class="min">
-        <div class="mn" id="mn"></div>
+    </header>
+
+    <section>
+      <div class="digitClock">
+        <div class="container">
+          <h2 id="hour">00</h2>
+          <h2 id="dot">:</h2>
+          <h2 id="min">00</h2>
+          <h2 id="dot">:</h2>
+          <h2 id="sec">00</h2>
+          <span id="ampm">AM</span>
+        </div>
       </div>
-      <div class="sec">
-        <div class="sc" id="sc"></div>
-      </div>
-    </div>
+    </section>
 
 
     <script type="text/javascript">
       function changeMode() {
         const body = document.querySelector('body');
         body.classList.toggle("dark");
-
       }
-
       const deg = 6;
       const hr = document.querySelector('#hr');
       const mn = document.querySelector('#mn');
       const sc = document.querySelector('#sc');
+
       setInterval(() => {
+
         let day = new Date();
         let hh = day.getHours() * 30;
         let mm = day.getMinutes() * deg;
@@ -45,6 +60,33 @@
         hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
         mn.style.transform = `rotateZ(${mm}deg)`;
         sc.style.transform = `rotateZ(${ss}deg)`;
+
+        let d_hh = day.getHours();
+        let d_mm = day.getMinutes();
+        let d_ss = day.getSeconds();
+
+        if (d_hh > 12) {
+          document.getElementById('ampm').innerHTML = "PM";
+          d_hh = d_hh - 12;
+        }
+
+        if (d_hh < 10) {
+          document.getElementById('hour').innerHTML = "0" + d_hh;
+        } else {
+          document.getElementById('hour').innerHTML = d_hh;
+        }
+        if (d_mm < 10) {
+          document.getElementById('min').innerHTML = "0" + d_mm;
+        } else {
+          document.getElementById('min').innerHTML = d_mm;
+        }
+        if (d_ss < 10) {
+          document.getElementById('sec').innerHTML = "0" + d_ss;
+        } else {
+          document.getElementById('sec').innerHTML = d_ss;
+        }
+       
+
       })
 
     </script>
