@@ -40,7 +40,6 @@ body.light {
   height: 15px;
   background: #D2D2FF;
   border: 1px solid #C8C8FF;
-  z-index: 100000;
   border-radius: 50%;
 }
 
@@ -179,8 +178,8 @@ input[type="checkbox"]:checked~.check:before {
 
 /*-----------Digital Clock-----------*/
 
-section {
-padding-left: 50px;
+article {
+padding-left: 40px;
 }
 
 .digitClock {
@@ -225,4 +224,34 @@ padding-left: 50px;
   font-size: 2em;
   color: #fff;
   font-weight: 700;
+}
+
+/*----------------mdeia Queary-----------------*/
+
+@media (max-width: 1024px){
+  section{
+    width: 300px;
+  }
+  article{
+    width: 650px;
+    padding-left: 80px;
+  }
+  .digitClock {
+  width: 550px;
+  height: 220px;
+}
+.digitClock .container h2 {
+  font-size: 5em;
+  color: #fff;
+  margin: 7px;
+}
+
+.digitClock .container h2:nth-child(odd){
+  padding: 5px 10px;
+}
+#ampm{
+  font-size: 1.8em;
+  font-weight: 500;
+   top: -60px;
+   right: -10px;
 }
