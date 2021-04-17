@@ -12,11 +12,6 @@ body {
   background: #cad3dc;
 }
 
-body.light {
-  transition: ease-in, 0.3s;
-}
-
-
 .clock {
   width: 350px;
   height: 350px;
@@ -31,6 +26,11 @@ body.light {
     10px 10px 10px rgba(0, 0, 0, 0.1),
     inset -8px -8px 15px rgba(255, 255, 255, 0.5),
     inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clock:hover{
+  transform: translateY(-4px);
+  transition: ease-out 0.5s;
 }
 
 .clock::before {
@@ -201,6 +201,11 @@ padding-left: 40px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   z-index: 10000;
+}
+
+.digitClock:hover{
+  transform: translateY(-4px);
+  transition: ease-out 0.5s;
 }
 
 .digitClock .container {
