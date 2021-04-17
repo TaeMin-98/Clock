@@ -106,7 +106,7 @@ body.light {
   border-radius: 6px 6px 0 0;
 }
 
-/*-----------Dark Mode-----------*/
+/*-----------------------------Dark Mode-------------------------------*/
 
 body.dark {
   background: #091921;
@@ -175,8 +175,15 @@ input[type="checkbox"]:checked~.check:before {
   height: 16px;
 }
 
+body.dark .digitClock .container h2 {
+  color: #E0FFFF;
+}
+body.dark .digitClock .container #ampm{
+  color: #E0FFFF;
+}
 
-/*-----------Digital Clock-----------*/
+
+/*---------------------------Digital Clock--------------------------------*/
 
 article {
 padding-left: 40px;
@@ -206,7 +213,7 @@ padding-left: 40px;
 
 .digitClock .container h2 {
   font-size: 6em;
-  color: #fff;
+  color: #FFF0F5;
   margin: 10px;
 }
 
@@ -222,11 +229,11 @@ padding-left: 40px;
   position: relative;
   top: -50px;
   font-size: 2em;
-  color: #fff;
+  color: #778899;
   font-weight: 700;
 }
 
-/*----------------mdeia Queary-----------------*/
+/*-----------------------------mdeia Queary------------------------------*/
 
 @media (max-width: 1024px){
   section{
