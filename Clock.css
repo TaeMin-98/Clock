@@ -12,6 +12,11 @@ body {
   background: #cad3dc;
 }
 
+body.light {
+  transition: ease-in, 0.3s;
+}
+
+
 .clock {
   width: 350px;
   height: 350px;
@@ -22,7 +27,7 @@ body {
   background-size: cover;
   border: 9px solid #cad3dc;
   border-radius: 50%;
-  box-shadow:  -8px -8px 15px rgba(255, 255, 255, 0.5),
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
     10px 10px 10px rgba(0, 0, 0, 0.1),
     inset -8px -8px 15px rgba(255, 255, 255, 0.5),
     inset 10px 10px 10px rgba(0, 0, 0, 0.1);
@@ -106,6 +111,7 @@ body {
 
 body.dark {
   background: #091921;
+  transition: ease-in, 0.3s;
 }
 
 body.dark .clock {
@@ -169,21 +175,3 @@ input[type="checkbox"]:checked~.check:before {
   width: 16px;
   height: 16px;
 }
-
-/*
-------after 요소 하나 더 추가------
-.check:after{
-  content: '';
-  position: absolute;
-  top: 2px;
-  right: -3px;
-  background: #092c3e;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  transition: 0.5s;
-}
-input[type="checkbox"]:checked ~ .check:after{
-  transform: translateX(0px);
-} 
-*/
