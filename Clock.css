@@ -207,15 +207,8 @@ article {
 }
 
 .digitClock {
- display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-  padding: 100px;
-  position: relative;
+  display: flex;
+  align-items: center;
   width: 700px;
   height: 250px;
   background: rgba(255, 255, 255, 0.05);
@@ -234,13 +227,7 @@ article {
 }
 
 .digitClock .Time {
-   display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
   display: flex;
-   -webkit-align-items: center;
-  justify-content: center;
   align-items: center;
 }
 
@@ -268,20 +255,14 @@ article {
 }
 
 .digitClock .Date {
-   display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
   display: flex;
-   -webkit-align-items: center;
-  justify-content: center;
-  align-items: flex-start;
 }
 
 .digitClock .Date span {
   font-size: 2em;
   color: #778899;
   margin: 5px;
+  font-family: fantasy;
 }
 
 
