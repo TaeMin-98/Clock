@@ -30,6 +30,7 @@
       10px 10px 10px rgba(0, 0, 0, 0.1),
       inset -8px -8px 15px rgba(255, 255, 255, 0.5),
       inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+      transition: ease-out 0.5s;
   }
 
   .clock:hover {
@@ -223,6 +224,7 @@
     backdrop-filter: blur(20px);
     flex-flow: column;
     justify-content: center;
+    transition: ease-out 0.5s;
   }
 
 
