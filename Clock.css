@@ -207,8 +207,13 @@ article {
 }
 
 .digitClock {
-  display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -ms-flexbox; display: -webkit-flex;
-  display: flex;
+ display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
   padding: 100px;
   position: relative;
   width: 700px;
@@ -229,7 +234,12 @@ article {
 }
 
 .digitClock .Time {
+   display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
   display: flex;
+   -webkit-align-items: center;
   justify-content: center;
   align-items: center;
 }
@@ -258,7 +268,12 @@ article {
 }
 
 .digitClock .Date {
+   display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
   display: flex;
+   -webkit-align-items: center;
   justify-content: center;
   align-items: flex-start;
 }
