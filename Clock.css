@@ -181,12 +181,13 @@ input[type="checkbox"]:checked~.check:before {
   height: 16px;
 }
 
-body.dark .digitClock{
-   box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.05),
+body.dark .digitClock {
+  box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.05),
     0px 15px 15px rgba(0, 0, 0, 0.3),
     inset 0px -15px 15px rgba(255, 255, 255, 0.05),
     inset 0px 15px 15px rgba(0, 0, 0, 0.3);
 }
+
 body.dark .digitClock .Time h2 {
   color: #E0FFFF;
 }
@@ -227,8 +228,8 @@ article {
 
 .digitClock .Time {
   display: flex;
- justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .digitClock .Time h2 {
@@ -254,16 +255,15 @@ align-items: center;
   font-weight: 700;
 }
 
-.Date{
+.Date {
   display: flex;
- justify-content: center;
- align-items: center;
+  justify-content: center;
 }
 
-.digitClock .Date span{
+.digitClock .Date span {
   font-size: 2em;
   color: #778899;
-  margin: 5px; 
+  margin: 5px;
   font-family: fantasy;
 }
 
@@ -301,7 +301,7 @@ align-items: center;
   }
 
   #ampm {
-    font-size: 1.8em;
+    font-size: 18em;
     font-weight: 500;
     top: -60px;
     right: -10px;
