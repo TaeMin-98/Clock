@@ -319,9 +319,9 @@
     }
 
     #ampm {
-      font-size: 1.8em;
+      font-size: 1.5em;
       font-weight: 500;
-      top: -60px;
+      top: -40px;
       right: -10px;
       transition: ease-out 0.3s;
     }
