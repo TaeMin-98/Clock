@@ -207,7 +207,7 @@ article {
 }
 
 .digitClock {
-  display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -ms-flexbox;
+  display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -ms-flexbox; display: -webkit-flex;
   display: flex;
   padding: 100px;
   position: relative;
@@ -221,6 +221,7 @@ article {
   flex-flow: column;
   justify-content: center;
 }
+
 
 .digitClock:hover {
   transform: translateY(-4px);
