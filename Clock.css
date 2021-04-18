@@ -264,7 +264,6 @@ article {
   font-size: 2em;
   color: #778899;
   margin: 5px;
-  font-family: fantasy;
 }
 
 
@@ -301,7 +300,7 @@ article {
   }
 
   #ampm {
-    font-size: 18em;
+    font-size: 1.8em;
     font-weight: 500;
     top: -60px;
     right: -10px;
