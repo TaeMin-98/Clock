@@ -258,6 +258,7 @@ article {
 .digitClock .Date {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .digitClock .Date span {
