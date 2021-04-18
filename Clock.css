@@ -199,10 +199,11 @@
     transition: 0.3 ease-out;
   }
 
-  body.dark .text {
-    text-shadow: 0 0 1px #DCFFDC;
+  body.dark .Date {
+    text-shadow: 0 0 5px #FFDC3C;
     transition: 0.3 ease-out;
   }
+  
 
   /*---------------------------Digital Clock--------------------------------*/
 
@@ -285,7 +286,7 @@
 
   .text {
     color: #fff;
-    text-shadow: 0 0 10px #8c8c8c;
+    text-shadow: 0 0 2px #828282;
   }
 
   /*-----------------------------mdeia Queary------------------------------*/
