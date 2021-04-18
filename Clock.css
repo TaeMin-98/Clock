@@ -255,7 +255,7 @@ article {
   font-weight: 700;
 }
 
-.Date {
+.digitClock .Date {
   display: flex;
   justify-content: center;
 }
