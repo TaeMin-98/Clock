@@ -83,7 +83,7 @@
         let d_mm = day.getMinutes();
         let d_ss = day.getSeconds();
       
-        if (12 <= d_hh < 24) {
+        if (12<=d_hh || d_hh<24) {
           document.getElementById('ampm').innerHTML = "PM";
         }
         if (d_hh > 12) {
