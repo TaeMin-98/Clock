@@ -82,12 +82,14 @@
         let d_hh = day.getHours(); //Digital Clock
         let d_mm = day.getMinutes();
         let d_ss = day.getSeconds();
-        if (d_hh > 12) {
-          d_hh = d_hh - 12;
-        }
+      
         if (12 <= d_hh < 24) {
           document.getElementById('ampm').innerHTML = "PM";
         }
+        if (d_hh > 12) {
+          d_hh = d_hh - 12;
+        }
+ 
 
         if (d_hh < 10) {
           document.getElementById('hour').innerHTML = "0" + d_hh;
