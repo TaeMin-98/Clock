@@ -76,16 +76,7 @@
 
 
     <script type="text/javascript">
-      function changeMode() {
-        const body = document.querySelector('body');
-        body.classList.toggle("dark");
-      }
-
-      function flip() {
-        const flipped = document.querySelector('.digitClock');
-        flipped.classList.toggle("flipped");
-      }
-
+    
 // 날씨/
       $.getJSON('http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=31ec7260bd9cc0d8d1bf3b02223d7981&units=metric', function(data) {
             const $icon = data.list[2].weather.icon;
@@ -99,8 +90,17 @@
             $('.ctemp').append($cTemp);
             $('.hightemp').append($maxTemp);
             $('.lowtemp').append($minTemp);
-      })
+      });
 
+      function changeMode() {
+        const body = document.querySelector('body');
+        body.classList.toggle("dark");
+      }
+
+      function flip() {
+        const flipped = document.querySelector('.digitClock');
+        flipped.classList.toggle("flipped");
+      }
       const deg = 6;
       const hr = document.querySelector('#hr');
       const mn = document.querySelector('#mn');
