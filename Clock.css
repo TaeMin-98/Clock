@@ -293,16 +293,14 @@ article {
 /*------------------------------Flip--------------------------------*/
 .flipped {
   transform: rotateY(180deg);
-  transition: 1s ease-out;
+  transition: 0.7s ease-out;
 }
 
 .clock-side {
   position: absolute;
   transform-style: preserve-3D;
-  backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  
-
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
 }
 
 .back {
@@ -317,13 +315,13 @@ article {
   article {
     width: 650px;
     padding-left: 80px;
-    transition: ease-out 0.5s;
+    transition: ease-out 0.7s;
   }
 
   .digitClock {
     width: 550px;
     height: 220px;
-    transition: ease-out 0.3s;
+    transition: ease-out 0.5s;
   }
 
   .digitClock .Time h2 {
