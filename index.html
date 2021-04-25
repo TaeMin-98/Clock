@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Clock</title>
     <link rel="stylesheet" href="Clock.css">  
-<script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
   </head>
 
   <body class="light">
@@ -76,22 +76,6 @@
 
 
     <script type="text/javascript">
-    
-// 날씨/
-      $.getJSON('http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=31ec7260bd9cc0d8d1bf3b02223d7981&units=metric', function(data) {
-            const $icon = data.list[0].weather.icon;
-            const $weather = data.list[0].weather.main;
-            const $cTemp = data.list[0].main.temp;
-            const $maxTemp = data.list[0].main.temp_max;
-            const $minTemp = data.list[0].main.temp_min;
-
-            $('.icon').append($icon);
-            $('.weather').append($weather);
-            $('.ctemp').append($cTemp);
-            $('.hightemp').append($maxTemp);
-            $('.lowtemp').append($minTemp);
-      });
-
       function changeMode() {
         const body = document.querySelector('body');
         body.classList.toggle("dark");
@@ -215,6 +199,21 @@
       }
       })
 
+    
+// 날씨/
+      $.getJSON('http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=31ec7260bd9cc0d8d1bf3b02223d7981&units=metric', function(data) {
+            const $icon = data.list[0].weather.icon;
+            const $weather = data.list[0].weather.main;
+            const $cTemp = data.list[0].main.temp;
+            const $maxTemp = data.list[0].main.temp_max;
+            const $minTemp = data.list[0].main.temp_min;
+
+            $('.icon').append($icon);
+            $('.weather').append($weather);
+            $('.ctemp').append($cTemp);
+            $('.hightemp').append($maxTemp);
+            $('.lowtemp').append($minTemp);
+      });
 
     </script>
   </body>
