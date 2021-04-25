@@ -28,32 +28,34 @@
     </section>
 
     <article>
-      <div class="digitClock">
-        <div class="upside">
-        
-          <div class="City text">
-            <span id="City">Seoul</span>
+      <div class="digitClock" onclick="flip()">
+        <div class="front clock-side">
+          <div class="upside">
+            <div class="City text">
+              <span id="City">Seoul</span>
+            </div>
+            <div class="Date text">
+              <span id="day">Day</span>
+              <span id="comma">,</span>
+              <span id="month">Month</span>
+              <span id="date">Date</span>
+              <span id="comma">,</span>
+              <span id="year">Year</span>
+            </div>
           </div>
-          
-          <div class="Date text">
-            <span id="day">Day</span>
-            <span id="comma">,</span>
-            <span id="month">Month</span>
-            <span id="date">Date</span>
-            <span id="comma">,</span>
-            <span id="year">Year</span>
+          <div class="downside">
+            <div class="Time text">
+              <h2 id="hour">00</h2>
+              <h2 id="dot">:</h2>
+              <h2 id="min">00</h2>
+              <h2 id="dot">:</h2>
+              <h2 id="sec">00</h2>
+              <span id="ampm">AM</span>
+            </div>
           </div>
         </div>
-
-        <div class="downside">
-          <div class="Time text">
-            <h2 id="hour">00</h2>
-            <h2 id="dot">:</h2>
-            <h2 id="min">00</h2>
-            <h2 id="dot">:</h2>
-            <h2 id="sec">00</h2>
-            <span id="ampm">AM</span>
-          </div>
+        <div class="back clock-side">
+          abcd
         </div>
       </div>
     </article>
@@ -64,6 +66,14 @@
         const body = document.querySelector('body');
         body.classList.toggle("dark");
       }
+
+      function flip() {
+        const flipped = document.querySelector('.digitClock');
+        flipped.classList.toggle("flipped");
+      }
+
+
+
       const deg = 6;
       const hr = document.querySelector('#hr');
       const mn = document.querySelector('#mn');
@@ -82,15 +92,15 @@
         let d_hh = day.getHours(); //Digital Clock
         let d_mm = day.getMinutes();
         let d_ss = day.getSeconds();
-      
+
         if (d_hh >= 12 && d_hh < 24) {
           document.getElementById('ampm').innerHTML = "PM";
         }
 
         if (d_hh > 12) {
-          d_hh -=  12;
+          d_hh -= 12;
         }
- 
+
 
         if (d_hh < 10) {
           document.getElementById('hour').innerHTML = "0" + d_hh;
