@@ -300,6 +300,8 @@ article {
   position: absolute;
   transform-style: preserve-3D;
   backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  
 
 }
 
