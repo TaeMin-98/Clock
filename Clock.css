@@ -299,8 +299,9 @@ article {
 .clock-side {
   position: absolute;
   transform-style: preserve-3D;
-    -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden;
+  backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
 }
 
 .back {
