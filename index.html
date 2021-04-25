@@ -29,7 +29,7 @@
 
     <article>
       <div class="digitClock" onclick="flip()">
-        <div class="front clock-side">
+        <div class="clock-side front">
           <div class="upside">
             <div class="City text">
               <span id="City">Seoul</span>
@@ -54,8 +54,21 @@
             </div>
           </div>
         </div>
-        <div class="back clock-side">
-          abcd
+
+        <div class="clock-side back">
+          <div class="upside">
+            <div class="City text">
+              <span id="City">Seoul</span>
+            </div>
+          </div>
+
+          <div class="downside">
+            <div class="icon"></div>
+            <div class="weather"></div>
+            <div class="ctemp"></div>
+            <div class="hightemp"></div>
+            <div class="lowtemp"></div>
+          </div>
         </div>
       </div>
     </article>
@@ -186,6 +199,22 @@
             document.getElementById('day').innerHTML = "Sunday";
             break;
         }
+      })
+
+      // 날씨
+      $.getJSON('http://api.openweathermap.org/data/2.5/forecast?id=1835848&appid=31ec7260bd9cc0d8d1bf3b02223d7981&units=metric', function(data) {
+       const $icon = data.list[2].weather.icon;
+        const $weather = data.list[2].weather.main;
+        const $cTemp = data.list[1].main.temp;
+        const $maxTemp = data.list[1].main.temp_max;
+        const $minTemp = data.list[1].main.temp_min;
+        
+        $('.icon').append($icon);
+        $('.weather').append($weather);
+        $('.ctemp').append($cTemp);
+        $('.hightemp').append($maxTemp);
+        $('.lowtemp').append($minTemp);
+        
       })
 
     </script>
