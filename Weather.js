@@ -15,23 +15,23 @@
              break;
 
            case 'Clear':
-             document.querySelector('.icon').innerHTML = '<img src="Clear.png">';
+             document.querySelector('.icon').innerHTML = '<img src="Clear.png" width = 125px height = 125px/>';
              break;
 
            case 'Clouds':
-             document.querySelector('.icon').innerHTML = '<img src="Clouds.png">';
+             document.querySelector('.icon').innerHTML = '<img src="Clouds.png" width = 125px height = 125px/>';
              break;
 
            case 'Snow':
-             document.querySelector('.icon').innerHTML = '<img src="Snow.png">';
+             document.querySelector('.icon').innerHTML = '<img src="Snow.png" width = 125px height = 125px/>';
              break;
 
            case 'Thunderstorm':
-             document.querySelector('.icon').innerHTML = '<img src="Thunderstorm.png">';
+             document.querySelector('.icon').innerHTML = '<img src="Thunderstorm.png" width = 125px height = 125px/>';
              break;
 
            case 'Mist', 'Smoke', 'Haze', 'Dust', 'Fog', 'Sand', 'Ash', 'Squall':
-             document.querySelector('.icon').innerHTML = '<img src="Clear.png">';
+             document.querySelector('.icon').innerHTML = '<img src="Clear.png" width = 125px height = 125px/>';
              break;
 
          }
