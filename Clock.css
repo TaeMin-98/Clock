@@ -359,12 +359,15 @@ body.dark .ctemp {
     font-size: 5em;
     margin: 7px;
     transition: ease-out 0.3s;
-    justify-content: center;
   }
 
   .digitClock .Time h2:nth-child(odd) {
     padding: 5px 10px;
     transition: ease-out 0.3s;
+  }
+  
+  .digitClock .front .Time{
+    justify-content: center;
   }
 
   #ampm {
@@ -388,5 +391,4 @@ body.dark .ctemp {
   
   .back .center {
   font-size: 4rem;
-
 }
