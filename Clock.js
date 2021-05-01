@@ -1,4 +1,4 @@
- const deg = 6;
+const deg = 6;
       const hr = document.querySelector('#hr');
       const mn = document.querySelector('#mn');
       const sc = document.querySelector('#sc');
@@ -101,13 +101,82 @@
             document.getElementById('day').innerHTML = "Thursday";
             break;
           case 5:
-            document.getElementById('dayh').innerHTML = "Friday";
+            document.getElementById('day').innerHTML = "Friday";
             break;
           case 6:
             document.getElementById('day').innerHTML = "Saturday";
             break;
           case 0:
             document.getElementById('day').innerHTML = "Sunday";
+            break;
+        }
+        
+        
+        
+        
+        
+        
+             document.getElementById('year2').innerHTML = d_yy;
+        switch (d_mh + 1) {
+          case 1:
+            document.getElementById('month2').innerHTML = "January";
+            break;
+          case 2:
+            document.getElementById('month2').innerHTML = "Febuary";
+            break;
+          case 3:
+            document.getElementById('month2').innerHTML = "March";
+            break;
+          case 4:
+            document.getElementById('month2').innerHTML = "Apirl";
+            break;
+          case 5:
+            document.getElementById('month2').innerHTML = "May";
+            break;
+          case 6:
+            document.getElementById('month2').innerHTML = "June";
+            break;
+          case 7:
+            document.getElementById('month2').innerHTML = "July";
+            break;
+          case 8:
+            document.getElementById('month2').innerHTML = "Agust";
+            break;
+          case 9:
+            document.getElementById('month2').innerHTML = "September";
+            break;
+          case 10:
+            document.getElementById('month2').innerHTML = "October";
+            break;
+          case 11:
+            document.getElementById('month2').innerHTML = "November";
+            break;
+          case 12:
+            document.getElementById('month2').innerHTML = "December";
+            break;
+        }
+        document.getElementById('date2').innerHTML = d_tt;
+        switch (d_dd) {
+          case 1:
+            document.getElementById('day2').innerHTML = "Monday";
+            break;
+          case 2:
+            document.getElementById('day2').innerHTML = "Tuesday";
+            break;
+          case 3:
+            document.getElementById('day2').innerHTML = "Wednesday";
+            break;
+          case 4:
+            document.getElementById('day2').innerHTML = "Thursday";
+            break;
+          case 5:
+            document.getElementById('day2').innerHTML = "Friday";
+            break;
+          case 6:
+            document.getElementById('day2').innerHTML = "Saturday";
+            break;
+          case 0:
+            document.getElementById('day2').innerHTML = "Sunday";
             break;
         }
       })
