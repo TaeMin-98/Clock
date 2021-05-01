@@ -169,7 +169,7 @@ article {
 }
 
 .digitClock .Date span {
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 5px;
   font-family: fantasy;
 }
@@ -182,7 +182,7 @@ article {
 .City {
   padding-right: 80px;
   padding-left: 20px;
-  font-size: 4.5em;
+  font-size: 4em;
   font-family: 'Dancing Script', cursive;
   letter-spacing: 0.1em;
   color: #fff;
@@ -385,12 +385,12 @@ body.dark .ctemp {
   }
 
   .digitClock .Date span {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .digitClock .upside .City {
     padding-right: 40px;
     padding-left: 10px;
-    font-size: 3.5em;
+    font-size: 3em;
     letter-spacing: 0.1em;
   }
