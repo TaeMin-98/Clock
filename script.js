@@ -5,13 +5,13 @@
          const minTemp = data.list[0].main.temp_min;
 
          $('.weather').append(weather);
-         $('.ctemp').append(cTemp);
-         $('.hightemp').append(maxTemp);
-         $('.lowtemp').append(minTemp);
+         $('.ctemp').prepend(Math.floor(cTemp));
+         $('.hightemp').prepend(Math.floor(maxTemp));
+         $('.lowtemp').prepend(Math.floor(minTemp));
 
          switch (weather) {
            case 'Rain':
-             document.querySelector('.icon').innerHTML = '<img src="img/Rain.png" width = 100px height = 100px/>';
+             document.querySelector('.icon').innerHTML = '<img src="img/Rain.png" width = 125px height = 125px/>';
              break;
 
            case 'Clear':
