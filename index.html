@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <title>Clock</title>
     <link rel="stylesheet" href="Clock.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
-</script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
   </head>
 
   <body class="light">
@@ -39,7 +39,7 @@
               <span id="City">Seoul</span>
             </div>
             <div class="Date text">
-              <span id="day">Day</span>
+                <span id="day">Day</span>
               <span id="comma">,</span>
               <span id="month">Month</span>
               <span id="date">Date</span>
@@ -64,25 +64,40 @@
             <div class="City text">
               <span id="City">Seoul</span>
             </div>
+            <div class="Date text">
+              <span id="day2">Day</span>
+              <span id="comma">,</span>
+              <span id="month2">Month</span>
+              <span id="date2">Date</span>
+              <span id="comma">,</span>
+              <span id="year2">Year</span>
+            </div>
           </div>
 
           <div class="downside">
+            <div class="leftside">
+              <div class="icon"> </div>
+              <div class="weather"> </div>
+            </div>
+            <div class="center">
+              <div class="ctemp"> </div>
+            </div>
+            <div class="rightside">
+              <div class="hightemp"> High : </div>
+              <div class="lowtemp"> Low : </div>
+            </div>
 
-            <div class="icon"> </div>
-            <div class="weatheddr"> Weather: </div>
-            <div class="ctemp"> Current Temperture: </div>
-            <div class="hightemp"> High Temperture: </div>
-            <div class="lowtemp"> Low Temperture: </div>
           </div>
         </div>
       </div>
+
     </article>
 
     <script src="Clock.js"></script>
     <script src="script.js"></script>
     <script>
       function changeMode() {
-        const body = document.querySelector('body'); 
+        const body = document.querySelector('body');
         body.classList.toggle("dark");
       }
 
