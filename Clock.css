@@ -169,7 +169,7 @@ article {
 }
 
 .digitClock .Date span {
-  font-size: 2.5em;
+  font-size: 2em;
   margin: 5px;
   font-family: fantasy;
 }
@@ -222,6 +222,7 @@ article {
 .back .center {
   margin: 0px 50px 50px 0px;
   font-size: 5rem;
+  letter-spacing: 0.1em;
   color: #fff;
   font-family: 'Parisienne', cursive;
 }
@@ -233,14 +234,14 @@ article {
   font-size: 1.5rem;
 }
 
-.back .downside .weather {
+/*.back .downside .weather {
   margin-bottom: 15px;
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-family: fantasy;
   color: #ADD8E6;
   text-shadow: 0 0 5px #fff;
-}
+}*/
 
 .back .downside .leftside {
   padding-left: 30px;
