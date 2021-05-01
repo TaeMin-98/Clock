@@ -357,9 +357,10 @@ body.dark .ctemp {
   }
 
   .digitClock .Time h2 {
-    font-size: 5.2em;
+    font-size: 5em;
     margin: 7px;
     transition: ease-out 0.3s;
+    align-items: center;
   }
 
   .digitClock .Time h2:nth-child(odd) {
