@@ -131,7 +131,6 @@ article {
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   justify-content: center;
-  transform: rotateY(0deg);
   transform-style: preserve-3D;
   transition: ease-out 1s;
 }
@@ -360,7 +359,7 @@ body.dark .ctemp {
     font-size: 5em;
     margin: 7px;
     transition: ease-out 0.3s;
-    align-items: center;
+    justify-content: center;
   }
 
   .digitClock .Time h2:nth-child(odd) {
