@@ -220,6 +220,7 @@ article {
 }
 
 .back .center {
+  padding-left: 20px;
   font-size: 5rem;
   letter-spacing: 0.1em;
   color: #fff;
