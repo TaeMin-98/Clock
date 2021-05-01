@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="Clock.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
 
   <body class="light">
@@ -66,7 +66,8 @@
           </div>
 
           <div class="downside">
-            <div class="icon"> Icon:</div>
+
+            <div class="icon"> </div>
             <div class="weather"> Weather: </div>
             <div class="ctemp"> Current Temperture: </div>
             <div class="hightemp"> High Temperture: </div>
@@ -80,7 +81,7 @@
     <script src="script.js"></script>
     <script>
       function changeMode() {
-        const body = document.querySelector('body');
+        const body = document.querySelector('body'); 
         body.classList.toggle("dark");
       }
 
