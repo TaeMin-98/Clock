@@ -1,410 +1,414 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #cad3dc;
-}
-
-body.light {
-  transition: ease-out 0.3s;
-}
-
-.clock {
-  width: 350px;
-  height: 350px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #cad3dc url(img/clock.png);
-  background-size: cover;
-  border: 9px solid #cad3dc;
-  border-radius: 50%;
-  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 10px rgba(0, 0, 0, 0.1),
-    inset -8px -8px 15px rgba(255, 255, 255, 0.5),
-    inset 10px 10px 10px rgba(0, 0, 0, 0.1);
-  transition: ease-out 0.3s;
-}
-
-.clock:hover {
-  transform: translateY(-4px);
-  transition: ease-out 0.3s;
-}
-
-.clock::before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background: #D2D2FF;
-  border: 1px solid #C8C8FF;
-  z-index: 10000;
-  border-radius: 50%;
-}
-
-.hour,
-.min,
-.sec {
-  position: absolute;
-}
-
-.hour,
-.hr {
-  width: 150px;
-  height: 150px;
-}
-
-.min,
-.mn {
-  width: 190px;
-  height: 190px;
-}
-
-.sec,
-.sc {
-  width: 230x;
-  height: 230px;
-}
-
-.hr,
-.mn,
-.sc {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.hr::before {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 80px;
-  background: #6495ed;
-  z-index: 10;
-  border-radius: 6px 6px 0 0;
-}
-
-.mn::before {
-  content: '';
-  position: absolute;
-  width: 4px;
-  height: 90px;
-  background: #00008b;
-  z-index: 11;
-  border-radius: 6px 6px 0 0;
-}
-
-.sc::before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 150px;
-  background: #ff6767;
-  z-index: 12;
-  border-radius: 6px 6px 0 0;
-}
-
-/*---------------------------Digital Clock--------------------------------*/
-
-article {
-  padding-left: 40px;
-  perspective: 1800px;
-}
-
-.digitClock {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 700px;
-  height: 260px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  justify-content: center;
-  transform-style: preserve-3D;
-  transition: ease-out 1s;
-  cursor : pointer;
-}
-
-.digitClock .Time {
-  display: flex;
-  align-items: center;
-}
-
-.digitClock .Time h2 {
-  font-size: 6em;
-  margin: 10px;
-}
-
-.digitClock .Time h2:nth-child(odd) {
-  padding: 5px 15px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#ampm {
-  position: relative;
-  top: -50px;
-  font-size: 2em;
-  font-weight: 700;
-}
-
-.digitClock .Date {
-  display: flex;
-  letter-spacing: 0.05em;
-  text-shadow: 0 0 2px #282828;
-}
-
-.digitClock .Date span {
-  font-size: 2em;
-  margin: 5px;
-  font-family: fantasy;
-}
-
-.front .upside {
-  display: flex;
-  align-items: center;
-}
-
-.City {
-  padding-right: 80px;
-  padding-left: 20px;
-  font-size: 4em;
-  font-family: 'Dancing Script', cursive;
-  letter-spacing: 0.1em;
-  color: #fff;
-  text-shadow: 0 0 20px #8c8c8c;
-  font-weight: 600;
-}
-
-.text {
-  color: #fff;
-  text-shadow: 0 0 2px #282828;
-}
-
-/*-----------------------------Weather--------------------------------*/
-
-.flipped {
-  transform: rotateY(180deg);
-  transition: 0.7s ease-out;
-}
-
-.clock-side {
-  position: absolute;
-  transform-style: preserve-3D;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.back {
-  transform: rotateY(180deg);
-}
-
-.back .upside {
-  display: flex;
-  align-items: center;
-  padding-top: 20px;
-}
-
-.back .center {
-  font-size: 5rem;
-  letter-spacing: 0.1em;
-  color: #fff;
-  font-family: 'Parisienne', cursive;
-  padding-left: 30px;
-}
-
-.back .downside {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 1.5rem;
-}
-
-.back .downside .leftside {
-  padding-left: 30px;
-}
-
-.back .downside .rightside {
-  padding-left: 40px;
-}
-
-.back .downside .rightside .a {
-  padding-bottom: 15px;
-}
-
-/*---------------------------Dark Mode----------------------------*/
-
-body.dark {
-  background: #091921;
-  transition: ease-out 0.3s;
-}
-
-body.dark .clock {
-  background: #091921 url(img/clock.png);
-  background-size: cover;
-  border: 4px solid #092c3e;
-  border-radius: 50%;
-  box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.05),
-    0px 15px 15px rgba(0, 0, 0, 0.3),
-    inset 0px -15px 15px rgba(255, 255, 255, 0.05),
-    inset 0px 15px 15px rgba(0, 0, 0, 0.3);
-}
-
-body.dark .mn::before {
-  background: #13C7A3;
-}
-
-label {
-  position: absolute;
-  top: 30px;
-  right: 50px;
-}
-
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  visibility: hidden;
-  display: none;
-  position: fixed;
-}
-
-.check {
-  position: relative;
-  display: block;
-  width: 40px;
-  height: 20px;
-  background: #092c3e;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: ease-in 0.3s;
-  box-shadow: 1px 1px 7px gray;
-}
-
-input[type="checkbox"]:checked~.check {
-  background: #cad3dc;
-}
-
-.check:before {
-  /*버튼 동그라미*/
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  background: #cad3dc;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  transition: ease-out 0.4s;
-}
-
-input[type="checkbox"]:checked~.check:before {
-  transform: translateX(20px);
-  background: #092c3e;
-  width: 16px;
-  height: 16px;
-}
-
-body.dark .digitClock {
-  box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.05),
-    0px 15px 15px rgba(0, 0, 0, 0.3),
-    inset 0px -15px 15px rgba(255, 255, 255, 0.05),
-    inset 0px 15px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* color: #E0FFFF;*/
-
-body.dark .digitClock .City {
-  text-shadow: 0 0 10px #00b3ff,
-    0 0 20px #00b3ff,
-    0 0 40px #00b3ff,
-    0 0 80px #00b3ff;
-  transition: 0.3 ease-out;
-}
-
-body.dark .Date {
-  text-shadow: 0 0 5px #FFDC3C;
-  transition: 0.3 ease-out;
-}
-
-body.dark .ctemp {
-  text-shadow: 0 0 10px #E0FFFF;
-  transition: 0.3 ease-out;
-}
-
-body.dark .back .downside .rightside {
-  text-shadow: 0 0 3px #E0FFFF;
-  transition: 0.3 ease-out;
-}
-
-/*-----------------------------mdeia Queary------------------------------*/
-@media (max-width: 1024px) {
-  section {
-    width: 300px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  article {
-    width: 650px;
-    padding-left: 80px;
-    transition: ease-out 0.7s;
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #cad3dc;
+  }
+
+  body.light {
+    transition: ease-out 0.3s;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+  }
+
+  .clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #cad3dc url(img/clock.png);
+    background-size: cover;
+    border: 9px solid #cad3dc;
+    border-radius: 50%;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+      10px 10px 10px rgba(0, 0, 0, 0.1),
+      inset -8px -8px 15px rgba(255, 255, 255, 0.5),
+      inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: ease-out 0.3s;
+  }
+
+  .clock:hover {
+    transform: translateY(-4px);
+    transition: ease-out 0.3s;
+  }
+
+  .clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #D2D2FF;
+    border: 1px solid #C8C8FF;
+    z-index: 10000;
+    border-radius: 50%;
+  }
+
+  .hour,
+  .min,
+  .sec {
+    position: absolute;
+  }
+
+  .hour,
+  .hr {
+    width: 150px;
+    height: 150px;
+  }
+
+  .min,
+  .mn {
+    width: 190px;
+    height: 190px;
+  }
+
+  .sec,
+  .sc {
+    width: 230x;
+    height: 230px;
+  }
+
+  .hr,
+  .mn,
+  .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #6495ed;
+    z-index: 10;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #00008b;
+    z-index: 11;
+    border-radius: 6px 6px 0 0;
+  }
+
+  .sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #ff6767;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+  }
+
+  /*---------------------Digital Clock-------------------------*/
+
+  container2 {
+    padding-left: 40px;
+    perspective: 2000px;
   }
 
   .digitClock {
-    width: 570px;
-    height: 230px;
-    transition: ease-out 0.5s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    height: 260px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    transform-style: preserve-3D;
+    transition: ease-out 1s;
+    cursor: pointer;
+  }
+
+  .digitClock .Time {
+    display: flex;
+    align-items: center;
   }
 
   .digitClock .Time h2 {
-    font-size: 5em;
-    margin: 7px;
-    transition: ease-out 0.3s;
+    font-size: 6em;
+    margin: 10px;
   }
 
   .digitClock .Time h2:nth-child(odd) {
-    padding: 5px 10px;
-    transition: ease-out 0.3s;
-  }
-  
-  .digitClock .front .Time{
-    justify-content: center;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   #ampm {
-    font-size: 1.5em;
-    font-weight: 500;
-    top: -40px;
-    right: -10px;
-    transition: ease-out 0.3s;
+    position: relative;
+    top: -50px;
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  .digitClock .Date {
+    display: flex;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 2px #282828;
   }
 
   .digitClock .Date span {
     font-size: 2em;
+    margin: 5px;
+    font-family: fantasy;
   }
 
-  .digitClock .upside .City {
-    padding-right: 40px;
-    padding-left: 10px;
-    font-size: 3.5em;
+  .front .upside {
+    display: flex;
+    align-items: center;
+  }
+
+  .City {
+    padding: 0px 80px 0px 20px;
+    font-size: 4em;
+    font-family: 'Dancing Script', cursive;
     letter-spacing: 0.1em;
+    color: #fff;
+    text-shadow: 0 0 20px #8c8c8c;
+    font-weight: 600;
   }
-  
-  .back .center {
-  font-size: 4rem;
-}
 
-.back .downside .rightside {
-  font-size: 1.3rem;
-}
+  .text {
+    color: #fff;
+    text-shadow: 0 0 2px #282828;
+  }
+
+  /*---------------------------Weather---------------------------*/
+
+  .flipped {
+    transform: rotateY(180deg);
+    transition: 0.7s ease-out;
+  }
+
+  .clock-side {
+    position: absolute;
+    transform-style: preserve-3D;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+
+  .back .upside {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .back .center {
+    font-size: 5rem;
+    letter-spacing: 0.1em;
+    color: #fff;
+    font-family: 'Parisienne', cursive;
+    padding-left: 30px;
+  }
+
+  .back .downside {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  .back .downside .leftside {
+    padding-left: 30px;
+  }
+
+  .back .downside .rightside {
+    padding-left: 40px;
+  }
+
+  .back .downside .rightside .a {
+    padding-bottom: 15px;
+  }
+
+  /*--------------------------Dark Mode------------------------*/
+
+  body.dark {
+    background: #091921;
+    transition: ease-out 0.3s;
+  }
+
+  body.dark .clock {
+    background: #091921 url(img/clock.png);
+    background-size: cover;
+    border: 4px solid #092c3e;
+    border-radius: 50%;
+    box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.05),
+      0px 15px 15px rgba(0, 0, 0, 0.3),
+      inset 0px -15px 15px rgba(255, 255, 255, 0.05),
+      inset 0px 15px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  body.dark .mn::before {
+    background: #13C7A3;
+  }
+
+  label {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+  }
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+    position: fixed;
+  }
+
+  .check {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #092c3e;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.3s;
+    box-shadow: 1px 1px 7px gray;
+  }
+
+  input[type="checkbox"]:checked~.check {
+    background: #cad3dc;
+  }
+
+  .check:before {   /*버튼 동그라미*/
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #cad3dc;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: ease-out 0.4s;
+  }
+
+  input[type="checkbox"]:checked~.check:before {
+    transform: translateX(20px);
+    background: #092c3e;
+    width: 16px;
+    height: 16px;
+  }
+
+  body.dark .digitClock {
+    box-shadow: 0px -15px 15px rgba(255, 255, 255, 0.05),
+      0px 15px 15px rgba(0, 0, 0, 0.3),
+      inset 0px -15px 15px rgba(255, 255, 255, 0.05),
+      inset 0px 15px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* color: #E0FFFF;*/
+
+  body.dark .digitClock .City {
+    text-shadow: 0 0 10px #00b3ff,
+      0 0 20px #00b3ff,
+      0 0 40px #00b3ff,
+      0 0 80px #00b3ff;
+    transition: 0.3 ease-out;
+  }
+
+  body.dark .Date {
+    text-shadow: 0 0 5px #FFDC3C;
+    transition: 0.3 ease-out;
+  }
+
+  body.dark .ctemp {
+    text-shadow: 0 0 10px #E0FFFF;
+    transition: 0.3 ease-out;
+  }
+
+  body.dark .back .downside .rightside {
+    text-shadow: 0 0 3px #E0FFFF;
+    transition: 0.3 ease-out;
+  }
+
+  /*------------------------mdeia Queary-----------------------*/
+  @media (max-width: 1024px) {
+
+    container1 {
+      padding-left: 70px;
+    }
+
+    container2 {
+      width: 650px;
+      padding-left: 30px;
+      transition: ease-out 0.7s;
+    }
+
+    .digitClock {
+      width: 570px;
+      height: 230px;
+      transition: ease-out 0.5s;
+    }
+
+    .digitClock .Time h2 {
+      font-size: 5em;
+      margin: 7px;
+      transition: ease-out 0.3s;
+    }
+
+    .digitClock .Time h2:nth-child(odd) {
+      padding: 5px 10px;
+      transition: ease-out 0.3s;
+    }
+
+    .digitClock .front .Time {
+      justify-content: center;
+    }
+
+    #ampm {
+      font-size: 1.5em;
+      font-weight: 500;
+      top: -40px;
+      right: -10px;
+      transition: ease-out 0.3s;
+    }
+
+    .digitClock .Date span {
+      font-size: 2em;
+    }
+
+    .digitClock .upside .City {
+      padding-right: 40px;
+      padding-left: 10px;
+      font-size: 3.5em;
+      letter-spacing: 0.1em;
+    }
+
+    .back .center {
+      font-size: 4rem;
+    }
+
+    .back .downside .rightside {
+      font-size: 1.3rem;
+    }
