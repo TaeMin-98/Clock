@@ -83,9 +83,17 @@
             <div class="center">
               <div class="ctemp">&#8451;</div>
             </div>
-            <div class="rightside">
-              <div class="hightemp">&#8451;</div>
-              <div class="lowtemp">&#8451;</div>
+            <div class="rightside text">
+
+              <div class="a">
+                <span class="hightemp"><img src="img/max-tem.png" width=30px, height=30px /></span><span>&#8451;</span>&nbsp;
+                <span class="lowtemp"> <img src="img/min-tem.png" width=30px, height=30px />&nbsp;</span><span>&#8451;</span>
+              </div>
+              <div class="b">
+                <span class="humidity"> <img src="img/humidity.png" width=30px, height=30px /></span><span>%</span>&nbsp;&nbsp;&nbsp;
+                <span class="wind"><img src="img/wind.png" width=30px, height=30px />&nbsp;</span><span>m/s</span>
+              </div>
+
             </div>
 
           </div>
@@ -93,9 +101,9 @@
       </div>
 
     </article>
+    <script src="Clock.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
-    <script src="Clock.js"></script>
     <script src="Weather.js"></script>
     <script>
       function changeMode() {
