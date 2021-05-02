@@ -1,17 +1,22 @@
-       $.getJSON('http://api.openweathermap.org/data/2.5/weather?id=1835848&appid=31ec7260bd9cc0d8d1bf3b02223d7981&units=metric', function(data) {
+       $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=seoul&appid=31ec7260bd9cc0d8d1bf3b02223d7981&units=metric', function(data) {
+         const cityName = data.name;
          const weather = data.weather[0].main;
          const cTemp = data.main.temp;
+         const humidity = data.main.humidity;
          const maxTemp = data.main.temp_max;
          const minTemp = data.main.temp_min;
-         const cityName = data.name;
-         
+         const wind = data.wind.speed;
+
+
          $('#City').append(cityName);
          $('#City2').append(cityName);
          $('.ctemp').prepend(Math.round(cTemp));
-         $('.hightemp').prepend(Math.round(maxTemp));
-         $('.lowtemp').prepend(Math.round(minTemp));
+         $('.humidity').append(Math.round(humidity));
+         $('.hightemp').append(Math.round(maxTemp));
+         $('.lowtemp').append(Math.round(minTemp));
+         $('.wind').append(Math.round(wind));
 
-         
+
 
          switch (weather) {
            case 'Rain':
