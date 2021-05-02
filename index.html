@@ -2,7 +2,6 @@
 <html>
 
   <head>
-
     <meta charset="utf-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Clock</title>
@@ -11,6 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
+    </script>
+    <script src="Weather.js"></script>
   </head>
 
   <body class="light">
@@ -18,93 +20,88 @@
       <input type="checkbox" onclick="changeMode()">
       <span class="check"></span>
     </label>
-
-    <section>
-      <div class="clock">
-        <div class="hour">
-          <div class="hr" id="hr"></div>
-        </div>
-        <div class="min">
-          <div class="mn" id="mn"></div>
-        </div>
-        <div class="sec">
-          <div class="sc" id="sc"></div>
-        </div>
-      </div>
-    </section>
-
-    <article>
-      <div class="digitClock" onclick="flip()">
-        <div class="clock-side front">
-          <div class="upside">
-            <div class="City text">
-              <span id="City"></span>
+    <main>
+      <section>
+        <container_1>
+          <div class="clock">
+            <div class="hour">
+              <div class="hr" id="hr"></div>
             </div>
-            <div class="Date text">
-              <span id="day">Day</span>
-              <span id="comma">,</span>
-              <span id="month">Month</span>
-              <span id="date">Date</span>
-              <span id="comma">,</span>
-              <span id="year">Year</span>
+            <div class="min">
+              <div class="mn" id="mn"></div>
+            </div>
+            <div class="sec">
+              <div class="sc" id="sc"></div>
             </div>
           </div>
-          <div class="downside">
-            <div class="Time text">
-              <h2 id="hour">00</h2>
-              <h2 id="dot">:</h2>
-              <h2 id="min">00</h2>
-              <h2 id="dot">:</h2>
-              <h2 id="sec">00</h2>
-              <span id="ampm">AM</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="clock-side back">
-          <div class="upside">
-            <div class="City text">
-              <span id="City2"></span>
-            </div>
-            <div class="Date text">
-              <span id="day2">Day</span>
-              <span id="comma">,</span>
-              <span id="month2">Month</span>
-              <span id="date2">Date</span>
-              <span id="comma">,</span>
-              <span id="year2">Year</span>
-            </div>
-          </div>
-
-          <div class="downside">
-            <div class="leftside">
-              <div class="icon"> </div>
-            </div>
-            <div class="center">
-              <div class="ctemp">&#8451;</div>
-            </div>
-            <div class="rightside text">
-
-              <div class="a">
-                <span class="hightemp"><img src="img/max-tem.png" width=30px, height=30px /></span><span>&#8451;</span>&nbsp;
-                <span class="lowtemp"> <img src="img/min-tem.png" width=30px, height=30px />&nbsp;</span><span>&#8451;</span>
+        </container_1>
+        <container_2>
+          <div class="digitClock" onclick="flip()">
+            <div class="clock-side front">
+              <div class="upside">
+                <div class="City text">
+                  <span id="City"></span>
+                </div>
+                <div class="Date text">
+                  <span id="day">Day</span>
+                  <span id="comma">,</span>
+                  <span id="month">Month</span>
+                  <span id="date">Date</span>
+                  <span id="comma">,</span>
+                  <span id="year">Year</span>
+                </div>
               </div>
-              <div class="b">
-                <span class="humidity"> <img src="img/humidity.png" width=30px, height=30px /></span><span>%</span>&nbsp;&nbsp;&nbsp;
-                <span class="wind"><img src="img/wind.png" width=30px, height=30px />&nbsp;</span><span>m/s</span>
+              <div class="downside">
+                <div class="Time text">
+                  <h2 id="hour">00</h2>
+                  <h2 id="dot">:</h2>
+                  <h2 id="min">00</h2>
+                  <h2 id="dot">:</h2>
+                  <h2 id="sec">00</h2>
+                  <span id="ampm">AM</span>
+                </div>
               </div>
-
             </div>
 
+            <div class="clock-side back">
+              <div class="upside">
+                <div class="City text">
+                  <span id="City2"></span>
+                </div>
+                <div class="Date text">
+                  <span id="day2">Day</span>
+                  <span id="comma">,</span>
+                  <span id="month2">Month</span>
+                  <span id="date2">Date</span>
+                  <span id="comma">,</span>
+                  <span id="year2">Year</span>
+                </div>
+              </div>
+              <div class="downside">
+                <div class="leftside">
+                  <div class="icon"> </div>
+                </div>
+                <div class="center">
+                  <div class="ctemp">&#8451;</div>
+                </div>
+                <div class="rightside text">
+                  <div class="a">
+                    <span class="hightemp"><img src="img/max-tem.png" width=30px, height=30px /></span><span>&#8451;</span>&nbsp;
+                    <span class="lowtemp"> <img src="img/min-tem.png" width=30px, height=30px />&nbsp;</span><span>&#8451;</span>
+                  </div>
+                  <div class="b">
+                    <span class="humidity"> <img src="img/humidity.png" width=30px, height=30px /></span><span>%</span>&nbsp;&nbsp;&nbsp;
+                    <span class="wind"><img src="img/wind.png" width=30px, height=30px />&nbsp;</span><span>m/s</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </container_2>
+      </section>
+    </main>
 
-    </article>
     <script src="Clock.js"></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
-    </script>
-    <script src="Weather.js"></script>
     <script>
       function changeMode() {
         const body = document.querySelector('body');
