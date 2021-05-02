@@ -133,6 +133,7 @@ article {
   justify-content: center;
   transform-style: preserve-3D;
   transition: ease-out 1s;
+  cursor : pointer;
 }
 
 .digitClock .Time {
