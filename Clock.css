@@ -245,7 +245,7 @@ article {
   padding-bottom: 15px;
 }
 
-/*-----------------------------Dark Mode-------------------------------*/
+/*---------------------------Dark Mode----------------------------*/
 
 body.dark {
   background: #091921;
@@ -277,6 +277,7 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   visibility: hidden;
   display: none;
+  position: fixed;
 }
 
 .check {
@@ -360,8 +361,8 @@ body.dark .back .downside .rightside {
   }
 
   .digitClock {
-    width: 550px;
-    height: 220px;
+    width: 570px;
+    height: 230px;
     transition: ease-out 0.5s;
   }
 
