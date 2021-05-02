@@ -238,7 +238,7 @@ article {
 }
 
 .back .downside .rightside {
-  padding-left: 45px;
+  padding-left: 40px;
 }
 
 .back .downside .rightside .a {
@@ -344,7 +344,7 @@ body.dark .ctemp {
 }
 
 body.dark .back .downside .rightside {
-  text-shadow: 0 0 5px #E0FFFF;
+  text-shadow: 0 0 3px #E0FFFF;
   transition: 0.3 ease-out;
 }
 
@@ -405,5 +405,5 @@ body.dark .back .downside .rightside {
 }
 
 .back .downside .rightside {
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
