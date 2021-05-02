@@ -238,7 +238,7 @@ article {
 }
 
 .back .downside .rightside {
-  padding-left: 50px;
+  padding-left: 45px;
 }
 
 .back .downside .rightside .a {
@@ -401,4 +401,8 @@ body.dark .back .downside .rightside {
   
   .back .center {
   font-size: 4rem;
+}
+
+.back .downside .rightside {
+  font-size: 1rem;
 }
