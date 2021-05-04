@@ -201,10 +201,10 @@
 
   /*---------------------------Weather---------------------------*/
 
-  .flipped {
+/*  .flipped {
     transform: rotateY(180deg);
     transition: 0.7s ease-out;
-  }
+  }*/
 
   .clock-side {
     position: absolute;
