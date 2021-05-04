@@ -213,8 +213,15 @@
     -webkit-backface-visibility: hidden;*/
   }
 
+.front{
+ backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
   .back {
     transform: rotateY(180deg);
+   backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
   .back .upside {
