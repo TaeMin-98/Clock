@@ -209,8 +209,8 @@
   .clock-side {
     position: absolute;
     transform-style: preserve-3D;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    /*backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;*/
   }
 
   .back {
