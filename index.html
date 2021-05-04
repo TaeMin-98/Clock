@@ -36,7 +36,7 @@
           </div>
         </container_1>
         <container_2>
-          <div class="digitClock" onclick="flip()">
+          <div class="digitClock" onclick="flip(this)">
             <div class="clock-side front">
               <div class="upside">
                 <div class="City text">
@@ -108,9 +108,11 @@
         body.classList.toggle("dark");
       }
 
-      function flip() {
-        const flipped = document.querySelector('.digitClock');
-        flipped.classList.toggle("flipped");
+      var count = 0;
+      function flip(e){
+        count ++;
+        var degree = 180 * count;
+        e.style.tranform = "rotate("+degree+"deg)";
       }
 
     </script>
