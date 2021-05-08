@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous">
     </script>
-    <script src="Weather.js"></script>
+    <script async src="Weather.js"></script>
   </head>
 
   <body class="light">
@@ -105,15 +105,20 @@
     <script>
       function changeMode() {
         const body = document.querySelector('body');
-        body.classList.toggle("dark");
+        body.classList.toggle('dark');
       }
 
       var count = 0;
-      function flip(e){
-        count ++;
+      function flip(e) {
+        count++;
         var degree = 180 * count;
-        e.style.transform = "rotateY("+degree+"deg)";
+        e.style.transform = "rotateY(" + degree + "deg)";
       }
+      
+      /*  function flip() {
+          const flip = document.querySelector('.digitClock');
+          flip.classList.toggle('flipped');
+        }*/
 
     </script>
   </body>
